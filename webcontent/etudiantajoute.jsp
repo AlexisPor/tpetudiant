@@ -7,14 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="menu.jsp"></jsp:include>
+
 	Felicitation, l'etudiant
 	<%=request.getAttribute("nom")%>
 	avec l'id
 	<%=request.getAttribute("code")%>
 	,a bien ete ajoute.
 	<br>
-	<a href="ajout.html"> Ajouter etudiant</a>
-	<br>
-	<a href="menu.jsp"> Retour au menu</a>
+
 </body>
 </html>

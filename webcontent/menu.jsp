@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Menu de navigation</title>
+<link rel="stylesheet"  type="text/css" href="style/style.css">
 </head>
 <body>
 	<h1>Menu de navigation</h1>

@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="menu.jsp"></jsp:include> <br>
+
 	Félicitation,<%=request.getAttribute("nom")%>
 	,vous êtes admis
 	<br>
-	<a href="formulaire.html"> Retourner au Formulaire </a>
-	<br>
-	<a href="menu.jsp"> Retour au menu </a>
+
 </body>
 </html>

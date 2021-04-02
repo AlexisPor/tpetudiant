@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javabeans.EtudiantJavaBean;
 import persistence.dao.EtudiantImpl;
 import persistence.entities.TEtudiant;
 
@@ -34,8 +35,19 @@ public class AfficherListeEtudiant extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EtudiantImpl eImpl = new EtudiantImpl();
 		List<TEtudiant>listE = new ArrayList<TEtudiant>();
+		List<EtudiantJavaBean> listEJB = new ArrayList<EtudiantJavaBean>();
 		listE = eImpl.findAllEtudiant();
-		request.setAttribute("liste", listE);
+		for (TEtudiant tEtudiant : listE) {
+			EtudiantJavaBean eBean = new EtudiantJavaBean();
+			eBean.setCode(tEtudiant.getECode().intValue());
+			eBean.getNom();
+			eBean.getMoyenne();
+			listEJB.add(eBean);
+		}
+		
+		
+		
+		request.setAttribute("liste", listEJB);
 		
 		request.getRequestDispatcher("/listeEtudiant.jsp").forward(request, response);
 		

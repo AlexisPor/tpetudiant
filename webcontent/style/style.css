@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+}
+ 
+ul a {
+    
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #808080;
+    
+}
+table{
+	 border:"solid 1px black";
+	 border-collapse: collapse;
+}
+table, td, th {
+	border: 1px solid black;
+	text-align: center;
+}
+h1{
+	color: blue;
+}
+
