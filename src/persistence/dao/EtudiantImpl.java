@@ -48,4 +48,13 @@ public class EtudiantImpl
     	return listeEtudiant;
 		
 	}
+	
+	public void delete(TEtudiant o) {
+		Session s = HibernateUtil.getSessionFactory().openSession();
+    	Transaction tx = s.beginTransaction();
+    	
+    	s.delete(o);// supprimer
+    	tx.commit();
+    	s.close();
+	}
 }
